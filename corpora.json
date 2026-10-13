@@ -1,0 +1,25 @@
+{
+  "corpora": {
+    "openhands_feedback": {
+      "repo_id": "OpenHands/openhands-feedback",
+      "revision": "facf45600d625510b98222ec584a8c9ac59272a2",
+      "file": "data/train-00000-of-00001.parquet",
+      "bytes": 113686725,
+      "sha256": "f8176795f554d2e40296ad17154f1539a4eb20474dee71de3bb1b3f36d41a9a0",
+      "license": "MIT",
+      "homepage": "https://huggingface.co/datasets/OpenHands/openhands-feedback",
+      "default_sample_size": 100
+    },
+    "data_agent_harbor": {
+      "repo_id": "AdithyaSK/data_agent_harbor_train_sft",
+      "revision": "12eab91ee6c3d25a64963ee35b2577a49656f186",
+      "file": "data/train-00000-of-00001.parquet",
+      "bytes": 28918861,
+      "sha256": "73a8d0587c73d1b712b514add40c647ee792f89d7eb5540252c66336533aa907",
+      "license": "MIT",
+      "homepage": "https://huggingface.co/datasets/AdithyaSK/data_agent_harbor_train_sft",
+      "default_sample_size": 200
+    }
+  }
+}
+
