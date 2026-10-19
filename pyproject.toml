@@ -1,11 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
 [project]
-name = "agent-shell-corpus"
+name = "agent-security-evals"
 version = "0.1.0"
-description = "Local corpus checks for OpenHands security analyzers"
-requires-python = ">=3.12"
-dependencies = [
-    "pyarrow>=23,<24",
+description = "Reproducible, non-executing security evaluations for agent analyzers and rule sets"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT OR Apache-2.0"
+authors = [{ name = "Fieldnote-Echo" }]
+license-files = ["LICENSE-MIT", "LICENSE-APACHE"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
 ]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/Fieldnote-Echo/agent-security-evals"
+Issues = "https://github.com/Fieldnote-Echo/agent-security-evals/issues"
+
+[project.optional-dependencies]
+atr = ["pyatr==0.3.1"]
+corpora = ["pyarrow>=18,<24"]
+
+[project.scripts]
+agent-security-evals = "agent_security_evals.cli:main"
 
 [dependency-groups]
 dev = [
@@ -14,12 +41,21 @@ dev = [
 ]
 
 [tool.uv]
-package = false
+package = true
 
 [tool.pytest.ini_options]
-pythonpath = ["."]
+pythonpath = ["src"]
 testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 88
-target-version = "py312"
+target-version = "py311"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agent_security_evals"]
+
+[tool.hatch.build]
+include = [
+    "src/agent_security_evals/**/*.py",
+    "src/agent_security_evals/data/**/*",
+]
