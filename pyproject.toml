@@ -37,7 +37,7 @@ agent-security-evals = "agent_security_evals.cli:main"
 [dependency-groups]
 dev = [
     "pytest>=8,<9",
-    "ruff>=0.14,<0.15",
+    "ruff>=0.14,<0.18",
 ]
 
 [tool.uv]
