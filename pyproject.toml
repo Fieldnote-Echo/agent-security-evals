@@ -28,7 +28,7 @@ Repository = "https://github.com/Fieldnote-Echo/agent-security-evals"
 Issues = "https://github.com/Fieldnote-Echo/agent-security-evals/issues"
 
 [project.optional-dependencies]
-atr = ["pyatr==0.3.1"]
+atr = ["pyatr==0.5.0"]
 corpora = ["pyarrow>=18,<24"]
 
 [project.scripts]
